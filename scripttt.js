@@ -115,7 +115,7 @@ function selectCity(button) {
 }
 
 function sendRequest() {
-  const phoneNumber = "966556209248";
+  const phoneNumber = "0556209248";
 
   const checkedTypes = Array.from(document.querySelectorAll(".experience-type:checked"))
     .map(input => input.value)
@@ -136,7 +136,7 @@ function sendRequest() {
 
 شكرًا.`;
 
-  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  const url = `https://wa.me/${0556209248}?text=${encodeURIComponent(message)}`;
 
   window.open(url, "_blank");
 }
