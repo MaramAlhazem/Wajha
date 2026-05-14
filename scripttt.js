@@ -115,7 +115,7 @@ function selectCity(button) {
 }
 
 function sendRequest() {
-  const phoneNumber = "966500000000";
+  const phoneNumber = "966556209248";
 
   const checkedTypes = Array.from(document.querySelectorAll(".experience-type:checked"))
     .map(input => input.value)
