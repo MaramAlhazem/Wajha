@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>وجهة | الصفحة الرئيسية</title>
+  <link rel="stylesheet" href="stylee.css" />
+</head>
+<body>
+
+  <div class="page">
+
+    <header class="navbar">
+      <div class="logo">
+        <span>وجهة</span>
+      </div>
+
+      <nav class="nav-links">
+        <a href="indexx.html" class="active">الرئيسية</a>
+        <a href="riyadh.html">الرياض</a>
+        <a href="qassim.html">القصيم</a>
+        <a href="#">كيف نساعدك؟</a>
+      </nav>
+
+    </header>
+
+    <main class="hero">
+
+      <div class="background-art">
+        <div class="sun"></div>
+        <div class="cloud cloud-one"></div>
+        <div class="cloud cloud-two"></div>
+        <div class="mountains"></div>
+        <div class="city"></div>
+        <div class="palms"></div>
+      </div>
+
+      <section class="hero-content">
+        <h1>محتار وين تروح اليوم؟</h1>
+        <h2>وصلت لوجهتك</h2>
+        <p>اختر مدينتك</p>
+
+        <div class="city-cards">
+
+  <div class="city-card" onclick="goToPage('riyadh.html')">
+    <img src="riyadh.jpg" alt="الرياض" class="city-image">
+    <h3>الرياض</h3>
+  </div>
+
+  <div class="city-card" onclick="goToPage('qassim.html')">
+    <img src="qassim.jpg" alt="القصيم" class="city-image">
+    <h3>القصيم</h3>
+  </div>
+
+</div>
+<div class="owner-section">
+      <button onclick="openWhatsApp()">
+       هل أنت صاحب مكان؟ تواصل معنا عبر واتساب
+      </button>
+    </div>
+
+  </div>
+      </section>
+
+    </main>
+
+    
+
+  <script src="script.js"></script>
+</body>
+</html>

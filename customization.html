@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>وجهة | خصص تجربتك</title>
+  <link rel="stylesheet" href="styleee.css" />
+</head>
+<body>
+
+<div class="page">
+
+  <header class="navbar">
+    <div class="logo">
+      <span>وجهة</span>
+    </div>
+
+    <nav class="nav-links">
+      <a href="indexx.html">الرئيسية</a>
+      <a href="riyadh.html">الرياض</a>
+      <a href="qassim.html">القصيم</a>
+      <a href="#" class="active">خصص تجربتك</a>
+    </nav>
+  </header>
+
+  <main class="custom-page">
+
+    <section class="custom-header">
+      <h1>خصص تجربتك</h1>
+      <p>جاوب على الأسئلة وخلنا نرتب لك تجربة تناسبك</p>
+    </section>
+
+    <section class="custom-layout">
+
+      <div class="custom-form">
+
+        <div class="custom-row">
+
+          <div class="custom-card small-card">
+            <h3>1. كم عدد الأشخاص؟</h3>
+            <p>كل شخص يزيد 100 ر.س</p>
+
+            <div class="counter">
+              <button onclick="decreasePeople()">-</button>
+              <span id="peopleCount">1</span>
+              <button onclick="increasePeople()">+</button>
+            </div>
+          </div>
+
+          <div class="custom-card large-card">
+            <h3>2. كم يوم التجربة؟</h3>
+            <p>كل جزء من اليوم 50 ر.س</p>
+
+            <div class="time-options">
+              <button class="time-btn active" data-value="50" onclick="selectTime(this)">صباح</button>
+              <button class="time-btn" data-value="50" onclick="selectTime(this)">عصر</button>
+              <button class="time-btn" data-value="50" onclick="selectTime(this)">ليل</button>
+              <button class="time-btn" data-value="150" onclick="selectTime(this)">يوم كامل</button>
+            </div>
+
+            <p class="days-label">عدد الأيام الكاملة</p>
+
+            <div class="counter days-counter">
+              <button onclick="decreaseDays()">-</button>
+              <span id="daysCount">1</span>
+              <button onclick="increaseDays()">+</button>
+            </div>
+          </div>
+
+          <div class="custom-card type-card">
+            <h3>3. نوع التجربة</h3>
+
+            <h4>أكل</h4>
+            <label>
+              <input type="checkbox" id="breakfast" value="فطور" class="experience-type">
+               فطور
+            </label>
+
+            <label>
+               <input type="checkbox" id="lunch" value="غداء" class="experience-type">
+               غداء
+               </label>
+
+            <label>
+                <input type="checkbox" id="dinner" value="عشاء" class="experience-type">
+                عشاء
+            </label>
+
+            <div class="filter-line"></div>
+
+<h4>نوع الفعاليات</h4>
+
+<label>
+  <input type="checkbox" value="فعاليات ترفيهية" class="experience-type">
+  فعاليات ترفيهية
+</label>
+
+<label>
+  <input type="checkbox" value="أماكن ثقافية" class="experience-type">
+  أماكن ثقافية
+</label>
+
+<label>
+  <input type="checkbox" value="مغامرات وأنشطة" class="experience-type">
+  مغامرات وأنشطة
+</label>
+
+<label>
+  <input type="checkbox" value="عائلية" class="experience-type">
+  عائلية
+</label>
+
+<label>
+  <input type="checkbox" value="مطاعم ومقاهي" class="experience-type">
+  مطاعم ومقاهي
+</label>
+            <div class="filter-line"></div>
+
+            <h4>فعاليات</h4>
+            <label><input type="checkbox" value="فعاليات تفاعلية" class="experience-type" checked> أحب أشارك في فعاليات وأنشطة</label>
+            <label><input type="checkbox" value="فعاليات حضور" class="experience-type" checked> أفضل أحضر فعاليات وعروض</label>
+          </div>
+
+        </div>
+
+        <div class="custom-card budget-card">
+          <h3>4. حدد ميزانيتك للشخص</h3>
+
+          <div class="budget-options">
+            <button class="budget-btn" onclick="selectBudget(this)">0 - 100</button>
+            <button class="budget-btn" onclick="selectBudget(this)">100 - 200</button>
+            <button class="budget-btn active" onclick="selectBudget(this)">200 - 300</button>
+            <button class="budget-btn" onclick="selectBudget(this)">300 - 400</button>
+            <button class="budget-btn" onclick="selectBudget(this)">400 - 500</button>
+            <button class="budget-btn" onclick="selectBudget(this)">ميزانية مفتوحة</button>
+          </div>
+        </div>
+
+        <div class="custom-card city-select-card">
+          <h3>5. اختر مدينتك</h3>
+
+          <div class="city-select-options">
+            <button class="city-select-btn active" onclick="selectCity(this)">الرياض</button>
+            <button class="city-select-btn" onclick="selectCity(this)">القصيم</button>
+          </div>
+        </div>
+
+        <button class="send-request" onclick="sendRequest()">إرسال الطلب</button>
+
+        <p class="send-note">سيتم تجهيز تفاصيل تجربتك حسب اختياراتك</p>
+
+      </div>
+
+      <aside class="summary-card">
+        <h3>ملخص التكلفة</h3>
+
+        <div class="summary-line"></div>
+
+        <div class="summary-item">
+          <span>عدد الأشخاص</span>
+          <strong id="summaryPeople">1</strong>
+        </div>
+
+        <div class="summary-item">
+          <span>عدد الأيام</span>
+          <strong id="summaryDays">1</strong>
+        </div>
+
+        <div class="summary-item">
+          <span>المدينة</span>
+          <strong id="summaryCity">الرياض</strong>
+        </div>
+
+        <div class="summary-item">
+          <span>الإجمالي</span>
+          <strong id="summaryTotalSmall">150 ر.س</strong>
+        </div>
+
+        <div class="summary-line"></div>
+
+        <h4>المبلغ الإجمالي</h4>
+        <h2 id="totalPrice">150 ر.س</h2>
+
+        <p class="summary-note">
+          المبلغ شامل المواصلات وسناكات خفيفة بين الفعاليات.
+          مبلغ الفعاليات نفسه لا يُحسب، مع توفر خصم خاص للفعاليات من أصحاب المكان.
+        </p>
+      </aside>
+
+    </section>
+
+  </main>
+
+</div>
+
+<script src="scripttt.js"></script>
+</body>
+</html>
